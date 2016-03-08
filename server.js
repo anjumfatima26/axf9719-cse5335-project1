@@ -37,7 +37,7 @@ var lcn;
 // POST Routes
 // --------------------------------------------------------
 // Provides method for getting the input from user
-    app.post('/stores', function(req, res){
+    app.post('stores', function(req, res){
         var location= req.body;
 
         lcn=location.name;
@@ -47,7 +47,7 @@ var lcn;
 // GET Routes
 // --------------------------------------------------------
 // Retrieve records for stores in the db according to given input
-app.get('/stores', function(req, res){
+app.get('stores', function(req, res){
 
     var collection = db.collection('stores');
 
