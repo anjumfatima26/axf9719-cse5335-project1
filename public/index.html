@@ -1,0 +1,91 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Store Locator App</title>
+    <meta name="description" content="A project demonstrating Google Map integration with MEAN App">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- Holder JS -->
+    <script src="../node_modules/holderjs/holder.js"></script>
+
+    <!-- Google Maps API -->
+    <script
+            src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+
+   <!--Angular js-->
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+
+    <!--controller.js-->
+    <script type="text/javascript" src="controller.js"></script>
+</head>
+'
+<!-- Declares myApp as the starting Angular module -->
+<body ng-app="myApp">
+<div class="container" ng-controller="storeCtrl">
+    <div class="header">
+        <h1 class="text-muted">The Store Locator Application</h1>
+    </div>
+    <!-- Map and Side Panel -->
+    <div class="row content">
+
+        <!-- Side Panel -->
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <!-- Panel Title -->
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center"> Enter the fields <span class="glyphicon glyphicon-map-marker"></span></h2>
+                </div>
+                <!-- Panel Body -->
+                <div class="panel-body">
+                    <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
+                    <form name ="addForm" novalidate method="post">
+
+                        <div class="form-group">
+                            <label>Select Location</label>
+                            <select ng-model="location.name" name="location" class="form-control">
+                                <option value="CA">CA</option>
+                                <option value="NJ">NJ</option>
+                                <option value="PA">PA</option>
+                            </select>
+                        </div>
+
+                        <!-- Submit button. Note that its tied to find() function from storeCtrl. Also note ng-disabled logic which prevents early submits.  -->
+                        <button  class="btn btn-primary btn-block" ng-click="find()" ng-disabled="addForm.$invalid">Submit</button>
+                    </form>
+
+                    <!-- getting data from database according to given input-->
+                    <div ng-repeat="marker in markers" >
+                        <br/>
+                        <a id="country_container" href="#"  ng-click="openInfoWindow($event, marker)">
+                            <label id="names" >Company Name: {{marker.company}}</label></a>
+                        <small>Address: {{marker.address}}</small><br/>
+                        <small>City: {{marker.city}}</small><br/>
+                        <small>Zip: {{marker.zip}}</small><br/>
+                        <small>Phone no: {{marker.phone}}</small>
+                        <br/>
+                        <br/>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="col-md-7">
+            <div id="map"><img src="holder.js/645x645"></div>
+        </div>
+    </div>
+    <hr/>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Anjum Fatima -
+             <a href="https://github.com/">Github Repo</a></p>
+    </div>
+</div>
+</body>
+</html>
