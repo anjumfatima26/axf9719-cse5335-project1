@@ -18,20 +18,16 @@ Steps to run using git:
 Install the Heroku Toolbelt
 
 Download and install the Heroku Toolbelt or learn more about the Heroku Command Line Interface.
-
 If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
-
 $ heroku login
+
 Clone the repository
-
 Use Git to clone cse5335-axf9719's source code to your local machine.
-
 $ heroku git:clone -a cse5335-axf9719
 $ cd cse5335-axf9719
+
 Deploy your changes
-
 Make some changes to the code you just cloned and deploy them to Heroku using Git.
-
 $ git add .
 $ git commit -am "make it better"
 $ git push heroku master
