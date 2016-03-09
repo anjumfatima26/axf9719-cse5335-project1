@@ -5,16 +5,16 @@ On the clicking the store link they will be able to see the store's specific mar
 
 ![appimage](https://raw.githubusercontent.com/anjumfatima26/axf9719-cse5335-project1/master/resources/app_image.jpg)
 
-# Server side Framework
+## Server side Framework
 It uses Node JS and Express JS as server side framework. Express is the most common Node JS web application framework that deals with exploring various code  which we need on a frequent basis like POST body / query string parsing. Express JS basically helps you manage everything, from routes, to handling requests and views.
 
-#Client side Framework
+##Client side Framework
 It uses Angular JS as client side framework. Angular JS has better data binding, DOM manipulation and it is light and very clean and involves simple manipulations.Good frameworks can help architect our code so that it is modular (therefore reusable), DRY, readable, performant and secure. 
 
-#Other components installed
+##Other components installed
 For running locally it requires a mongodb for running mongod command in background. It uses heroku mongolab db for storing the documents. Refer heroku mongolab documention to connect to the database and importing data from the csv or json file.
 
-# Steps to run
+## Steps to run
 This github code can be used to deploy on Heroku. It fetches data from a MongoLab database. Or it can be run on local machine with mongodb running and server running on port 8000.
 
 Steps to run using git:  
