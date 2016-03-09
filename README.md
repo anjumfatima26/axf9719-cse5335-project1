@@ -37,7 +37,7 @@ Steps to run using github:
 On heroku dashboard select the project and click on deploy using github.Connect to github repository and manual deploy branch.  
 
 Steps to run on local machine:  
-Run mongod commamad from mongodb server bin folder installed.  
+Run mongod command from mongodb server bin folder installed.  
 Run server.js -It will listen on port 8000.  
 On browser go to http://localhost:8000  
 
