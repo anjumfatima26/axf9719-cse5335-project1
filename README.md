@@ -14,7 +14,7 @@ It uses Angular JS as client side framework. Angular JS has better data binding,
 # Steps to run
 This github code can be used to deploy on Heroku. It fetches data from a MongoLab database. Or it can be run on local machine with mongodb running and server running on port 8000.
 
-++Steps to run using git:++  
+Steps to run using git:    
 Install the Heroku Toolbelt  
 
 Download and install the Heroku Toolbelt or learn more about the Heroku Command Line Interface.  
